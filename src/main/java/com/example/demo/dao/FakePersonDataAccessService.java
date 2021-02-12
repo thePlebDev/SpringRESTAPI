@@ -18,6 +18,12 @@ public class FakePersonDataAccessService implements PersonDao{
 		DB.add(new Person(person.getName(),id));
 		return 1;
 	}
+
+	@Override
+	public List<Person> selectAllPeople() {
+		// TODO Auto-generated method stub
+		return DB;
+	}
 	
 
 }

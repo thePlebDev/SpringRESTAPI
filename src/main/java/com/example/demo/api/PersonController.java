@@ -1,5 +1,7 @@
 package com.example.demo.api;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +28,11 @@ public class PersonController {
 		@PostMapping
 		public void addPerson(@RequestBody Person person) {
 			personService.addPerson(person);
+		}
+		
+		@GetMapping
+		public List<Person> getAllPeople(){
+			return personService.getAllPeople();
 		}
 		
 	
